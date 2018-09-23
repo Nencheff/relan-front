@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link type="text/css"  href="/static/css/cover.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Relan</title>
+</head>
+<body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead">Relan</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading"></h1>
+
+            <div class="">
+                <div class="card-body">
+                    <div class="float-right mb-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-light btn-filter " data-target="intact">Intact</button>
+                            <button type="button" class="btn btn-outline-light btn-filter" data-target="exceptional">Exceptional</button>
+                            <button type="button" class="btn btn-outline-light btn-filter" data-target="flawless">Flawless</button>
+                            <button type="button" class="btn btn-outline-light btn-filter" data-target="radiant">Radiant</button>
+                            <button type="button" class="btn btn-light btn-filter" data-target="all">All</button>
+                        </div>
+                    </div>
+                    <input class="form-control form-control-lg bg-dark" onkeyup="table()" id="tableSearch" type="text" placeholder="Search for a relic...">
+
+                    <div class="mt-2 card-body">
+                        <table id="relicTable" class="table table-fixed table-borderless table-hover" cellpadding="0"
+                            cellspacing="0">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Avg. plat</th>
+                                    <th scope="col">Avg. ducats</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+                                <tr data-status="radiant">
+                                    <td>Axi A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="flawless">
+                                    <td>Neo A1</td>
+                                    <td>60.5</td>
+                                    <td>53.2</td>
+                                </tr>
+                                <tr data-status="radiant">
+                                    <td>Neo B2</td>
+                                    <td>70.5</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr data-status="exceptional">
+                                    <td>Axi A1</td>
+                                    <td>62.5</td>
+                                    <td>56.2</td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id = 'emptyResults' class='text-center font-itallic text-muted' style="display:none"> No results found.</div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>footer</p>
+            </div>
+        </footer>
+    </div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin="anonymous"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
+<script src="/static/js/scripts.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js"></script></body>
+</html>
