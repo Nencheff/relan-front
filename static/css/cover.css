@@ -107,5 +107,9 @@ body {
 }
 
 table {
-
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: none;
 }
